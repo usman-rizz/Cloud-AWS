@@ -134,76 +134,18 @@ Cloud computing does not automatically make every system cheaper, more secure, o
 
 ---
 
-## 🕰️ 2. A Short History of AWS
 
-AWS grew from Amazon's need to operate large-scale technology infrastructure and eventually made cloud infrastructure available to other organisations.
-
-The important thing is not memorising every launch date. It is understanding how cloud services expanded from basic building blocks into a broad platform for modern applications, analytics, and AI.
-
-### AWS Evolution Timeline
-
-| Period      | Milestone                                                | Why It Matters                                                                               |
-| ----------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Early 2000s | Amazon develops and scales its technology infrastructure | Large-scale operations create demand for reusable infrastructure capabilities                |
-| 2004        | Amazon SQS becomes available                             | Message queuing helps applications communicate asynchronously                                |
-| 2006        | Amazon S3 and Amazon EC2 launch                          | Object storage and on-demand compute become foundational cloud building blocks               |
-| 2007 onward | The AWS service portfolio expands                        | More capabilities become available for networking, databases, and application development    |
-| 2010s       | Cloud-native architectures grow                          | Serverless, containers, managed databases, and automation become important design approaches |
-| Today       | AWS supports a broad range of workloads                  | Organisations use AWS for applications, data platforms, analytics, security, and AI          |
-
-\<p align="center">
+<p align="center">
 &#x20; \<a href="[https://aws.amazon.com/about-aws/our-origins/](https://aws.amazon.com/about-aws/our-origins/)">
 &#x20;   \<img src="[https://img.shields.io/badge/Explore-Official%20AWS%20History-FF9900?style=for-the-badge&logo=amazonaws&logoColor=232F3E](https://img.shields.io/badge/Explore-Official%20AWS%20History-FF9900?style=for-the-badge\&logo=amazonaws\&logoColor=232F3E)" alt="Read the official AWS history"/>
 &#x20; \</a>
-\</p>
+</p>
 
 **The key takeaway:** AWS is not one product. It is a collection of services that work together to provide the building blocks for cloud-based systems.
 
----
 
-## 🌍 3. How the AWS Cloud Works
 
-To understand AWS architecture, start with its global infrastructure.
-
-### AWS Global Infrastructure
-
-| Component              | What It Means                                                                                |
-| ---------------------- | -------------------------------------------------------------------------------------------- |
-| Region                 | A separate geographical area where AWS operates infrastructure                               |
-| Availability Zone (AZ) | An isolated grouping of infrastructure within a Region                                       |
-| Edge Location          | Infrastructure used by services such as Amazon CloudFront to deliver content closer to users |
-| VPC                    | Your logically isolated virtual network within AWS                                           |
-| Subnet                 | A range of IP addresses within a VPC associated with a particular Availability Zone          |
-| Security Group         | A stateful virtual firewall associated with supported resources                              |
-| IAM                    | A service for managing identities, permissions, and access to AWS resources                  |
-
-### Example: What Happens When Someone Opens a Website?
-
-```mermaid
-flowchart TD
-    A[User opens a website] --> B[DNS resolves the domain]
-    B --> C[CloudFront or public application endpoint]
-    C --> D[Application hosted on EC2 or another compute service]
-    D --> E[Application accesses a database]
-    E --> F[Response is returned to the user]
-```
-
-This is a conceptual example, not a mandatory AWS architecture. Actual designs depend on application requirements, security boundaries, traffic patterns, availability goals, and cost.
-
-### The Shared Responsibility Model
-
-AWS operates and secures the underlying cloud infrastructure. Customers remain responsible for securing their workloads according to the services they select and how they configure them.
-
-For example:
-
-- **AWS:** Physical data centres and the underlying infrastructure.
-- **Customer:** Appropriate IAM permissions, application security, and data access configuration.
-- **Shared or service-dependent:** Network configuration, operating system patching, encryption settings, and other controls depending on the service and architecture.
-
-Official documentation: [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
-
----
-
+-----------------
 ## 🧩 4. AWS Service Map
 
 AWS offers many services, and its service portfolio changes over time. This section focuses on the important service families you should understand first rather than treating every service as something to memorise.
@@ -328,55 +270,6 @@ The roadmap is a learning sequence, not a requirement that every AWS professiona
 
 ---
 
-## 🏗️ 6. Architecture Diagrams
-
-Architecture diagrams help connect individual services into a working system.
-
-### Architecture 1: A Simple Web Application
-
-```mermaid
-flowchart TD
-    U[User] --> DNS[Route 53]
-    DNS --> CDN[CloudFront]
-    CDN --> APP[Application layer]
-    APP --> DB[(Amazon RDS)]
-    APP --> S3[(Amazon S3)]
-    APP --> MON[CloudWatch]
-```
-
-**What you should understand:** DNS, content delivery, application hosting, database connectivity, object storage, and monitoring.
-
-### Architecture 2: Event-Driven Processing
-
-```mermaid
-flowchart TD
-    A[New file uploaded] --> B[Amazon S3]
-    B --> C[Event notification]
-    C --> D[AWS Lambda]
-    D --> E[Validate and process file]
-    E --> F[Store processed output in S3]
-    D --> G[CloudWatch logs]
-```
-
-**What you should understand:** events, triggers, serverless execution, error handling, logging, and permissions between services.
-
-### Architecture 3: A Basic Data Lake
-
-```mermaid
-flowchart TD
-    A[Data Sources] --> B[Ingestion Script]
-    B --> C[(S3 Bronze)]
-    C --> D[Transformation with Glue or Python]
-    D --> E[(S3 Silver)]
-    E --> F[Quality Checks]
-    F --> G[(S3 Gold)]
-    G --> H[Athena / Redshift / BI]
-```
-
-**What you should understand:** ingestion, data organisation, transformations, quality validation, storage layers, and analytics.
-
----
-
 ## 🧪 7. Hands-On Labs
 
 Reading about a service is useful. Actually configuring it, testing it, and troubleshooting it makes the concept stick.
@@ -451,23 +344,23 @@ This is a continuously evolving learning resource. As new topics and projects ar
 ## 🔗 Connect With Me
 
 <p align="left">
-&#x20; \<a href="[https://www.linkedin.com/in/mohammad-usman736/](https://www.linkedin.com/in/mohammad-usman736/)">
-&#x20;   \<img src="[https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)" alt="LinkedIn"/>
-&#x20; \</a>
-&#x20; \<a href="mailto\:usman.rizz6769\@gmail.com">
-&#x20;   \<img src="[https://img.shields.io/badge/Gmail-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white](https://img.shields.io/badge/Gmail-Contact-D14836?style=for-the-badge\&logo=gmail\&logoColor=white)" alt="Gmail"/>
-&#x20; \</a>
-&#x20; \<a href="[https://github.com/usman-rizz](https://github.com/usman-rizz)">
-&#x20;   \<img src="[https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub"/>
-&#x20; \</a>
-\</p>
+&#x20; <a href="[https://www.linkedin.com/in/mohammad-usman736/](https://www.linkedin.com/in/mohammad-usman736/)">
+&#x20;   <img src="[https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)" alt="LinkedIn"/>
+&#x20; </a>
+&#x20; <a href="mailto\:usman.rizz6769@gmail.com">
+&#x20;   <img src="[https://img.shields.io/badge/Gmail-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white](https://img.shields.io/badge/Gmail-Contact-D14836?style=for-the-badge\&logo=gmail\&logoColor=white)" alt="Gmail"/>
+&#x20; </a>
+&#x20; <a href="[https://github.com/usman-rizz](https://github.com/usman-rizz)">
+&#x20;   <img src="[https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub"/>
+&#x20; </a>
+</p>
 
 ---
 
 <p align="center">
-&#x20; \<b>☁️ Learn the concepts. Build the architecture. Understand the trade-offs.\</b>
+&#x20; <b>☁️ Learn the concepts. Build the architecture. Understand the trade-offs.</b>
 </p>
 
 <p align="center">
-&#x20; \<i>From cloud fundamentals to practical AWS solutions — one concept and one project at a time.\</i>
+&#x20; <i>From cloud fundamentals to practical AWS solutions — one concept and one project at a time.</i>
 </p>
